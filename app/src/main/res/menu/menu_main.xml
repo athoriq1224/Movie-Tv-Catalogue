@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mysubmission3.MainActivity">
+    <item
+        android:id="@+id/action_change_settings"
+        android:title="@string/change_language_settings"
+        app:showAsAction="never" />
+</menu>

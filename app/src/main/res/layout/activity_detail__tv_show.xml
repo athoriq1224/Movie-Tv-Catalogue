@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.mysubmission3.listtvshow.pojo.detail.DetailTvShowViewModel"/>
+        <variable name="title" type="String"/>
+        <variable name="releaseDate" type="String"/>
+        <variable name="vote" type="String"/>
+        <variable name="originalLanguage" type="String"/>
+        <variable name="overview" type="String"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="226dp"
+            android:id="@+id/img_poster"
+            />
+
+        <RelativeLayout
+            android:layout_width="403dp"
+            android:layout_height="723dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="226dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/title"
+                android:text="@string/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@style/value"
+                android:layout_marginStart="4dp"
+                android:text="@{title}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTitle"
+                android:paddingTop="11dp"/>
+
+
+            <TextView
+                style="@style/title"
+                android:text="@string/tanggal_rilis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                style="@style/value"
+                android:layout_marginStart="4dp"
+                android:text="@{releaseDate}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvReleaseDate"
+                android:layout_marginTop="63dp"/>
+
+            <TextView
+                style="@style/title"
+                android:text="@string/vote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="103dp"/>
+            <TextView
+                android:id="@+id/tvVote"
+                style="@style/value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="115dp"
+                android:text="@{vote}" />
+
+            <TextView
+                style="@style/title"
+                android:text="@string/bahasa_asal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="150dp"/>
+            <TextView
+                style="@style/value"
+                android:layout_marginStart="4dp"
+                android:text="@{originalLanguage}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvOriginalLanguage"
+                android:paddingTop="160dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_txt_overview"
+                android:layout_width="387dp"
+                android:layout_height="490dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@{overview}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.968"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOriginalLanguage" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:padding="8dp">-->
+
+
+<!--        <ImageView-->
+<!--            android:minHeight="256dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/guideline"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/img_poster"-->
+<!--            android:contentDescription="TODO" />-->
+
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/guideline"-->
+<!--            app:layout_constraintGuide_percent=".5"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_margin="8dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@id/guideline"-->
+<!--            app:layout_constraintTop_toTopOf="@id/img_poster"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/img_poster"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp">-->
+
+<!--            <TextView-->
+<!--                style="@style/title"-->
+<!--                android:text="@string/title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <TextView-->
+<!--                style="@style/value"-->
+<!--                android:layout_marginStart="4dp"-->
+<!--                android:text="@{title}"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tvTitle" />-->
+
+<!--            <TextView-->
+<!--                style="@style/title"-->
+<!--                android:text="@string/tanggal_rilis"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <TextView-->
+<!--                style="@style/value"-->
+<!--                android:layout_marginStart="4dp"-->
+<!--                android:text="@{releaseDate}"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tvReleaseDate" />-->
+
+<!--            <TextView-->
+<!--                style="@style/title"-->
+<!--                android:text="@string/vote"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <TextView-->
+<!--                style="@style/value"-->
+<!--                android:layout_marginStart="4dp"-->
+<!--                android:text="@{vote}"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tvVote" />-->
+
+<!--            <TextView-->
+<!--                style="@style/title"-->
+<!--                android:text="@string/bahasa_asal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <TextView-->
+<!--                style="@style/value"-->
+<!--                android:layout_marginStart="4dp"-->
+<!--                android:text="@{originalLanguage}"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tvOriginalLanguage" />-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_txt_overview"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:layout_marginTop="136dp"-->
+<!--            android:text="@{overview}"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.968"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/img_poster" />-->
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</layout>
